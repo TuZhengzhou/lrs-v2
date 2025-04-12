@@ -19,7 +19,7 @@ for i in $(seq 10 16); do
     name=merkle_$i
     echo $name
 
-    circom $name.circom --r1cs --wasm --sym -p=bn128
+    circom $name.circom --r1cs --wasm --sym --json -p=bn128
     snarkjs ri $name.r1cs
 
     # snarkjs rp $name.r1cs

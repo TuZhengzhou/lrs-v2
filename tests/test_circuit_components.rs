@@ -17,7 +17,7 @@ where
     let num_pub_io = 1usize;
     let num_commit_witness = 1usize;
     let ioputs_name = vec!["main.phi", "main.sk"];
-    let path_prefix = "./circoms/lrs_a/phi/";
+    let path_prefix = "./circoms/tests/phi/";
     let circuit_name = "phi";
 
     let circ_desc = CircDescriptor {
@@ -111,7 +111,7 @@ pub const IOPUTS_NAME_SCHNORR_SIGN: [&str; 8] = [
     "main.pk[1]",
     "main.k",
 ];
-pub const PATH_PREFIX_SCHNORR_SIGN: &str = "./circoms/lrs_a/schnorr_sign/";
+pub const PATH_PREFIX_SCHNORR_SIGN: &str = "./circoms/tests/schnorr_sign/";
 pub const CIRCUIT_NAME_SCHNORR_SIGN: &str = "schnorr_sign";
 
 /// Prove and verify Schnorr signature generation
@@ -151,7 +151,7 @@ pub const IOPUTS_NAME_SCHNORR_VERIFY: [&str; 7] = [
     "main.pk[1]",
     "main.sk",
 ];
-pub const PATH_PREFIX_SCHNORR_VERIFY: &str = "./circoms/lrs_a/schnorr_verify/";
+pub const PATH_PREFIX_SCHNORR_VERIFY: &str = "./circoms/tests/schnorr_verify/";
 pub const CIRCUIT_NAME_SCHNORR_VERIFY: &str = "schnorr_verify";
 
 /// Prove and verify Schnorr signature verification
@@ -226,7 +226,7 @@ pub const IOPUTS_NAME_LRS_A: [&str; 41] = [
     "main.pathIndices[14]",
 ];
 pub const PATH_PREFIX_LRS_A: &str = "./circoms/lrs_a/lrs_a/lrs_a_circoms/";
-pub const CIRCUIT_NAME_LRS_A: &str = "lrs_a_10";
+pub const CIRCUIT_NAME_LRS_A: &str = "lrs_a_15";
 
 /// Prove and verify LRS_A
 pub fn cc_prove_and_verify_lrs_a<E>(n_iters: usize)

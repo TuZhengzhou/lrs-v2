@@ -8,7 +8,6 @@ pub mod link;
 pub mod cc;
 pub mod sma;
 pub mod lrs;
-pub mod lrs_a;
 pub mod constants;
 
 use crate::cc::error;

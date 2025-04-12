@@ -12,7 +12,7 @@ use std::env::args;
 
 type F = <Bn254 as Pairing>::ScalarField;
 
-fn lrs_signature(n_iters: usize) {
+fn lrs_signature(n_iters: usize, log2_low: usize, log2_high: usize) {
 
     let security_par = "128".to_string();
     let msg = "test message";
@@ -28,7 +28,7 @@ fn lrs_signature(n_iters: usize) {
     let signer_idx = 1usize;
     let rng = &mut ark_std::test_rng();
 
-    for ring_size_max_log in 10..=20 {
+    for ring_size_max_log in log2_low..=log2_high {
         let ring_size_max = 1 << ring_size_max_log;
         println!("Ring size: {}", ring_size_max);
         let (lrs_pvkey, circuit) =
@@ -89,10 +89,10 @@ fn main() {
     } else {
         1
     };
-    lrs_signature(n_iters);
+    lrs_signature(n_iters, 10, 20);
 }
 
 #[test]
 fn test_lrs_signature() {
-    lrs_signature(1);
+    lrs_signature(1, 10, 10);
 }
