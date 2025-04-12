@@ -1,7 +1,7 @@
 pragma circom 2.2.0;
 
-include "escalarmul.circom";
-include "mimc.circom";
+include "./include/escalarmul.circom";
+include "./include/mimc.circom";
 
 
 

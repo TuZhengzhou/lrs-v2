@@ -9,14 +9,14 @@ use lrs_v2::lrs::verify;
 use lrs_v2::lrs::CircDescriptor;
 use lrs_v2::sma::ring_gen;
 use std::env::args;
+use ark_std::thread::sleep;
 
 type F = <Bn254 as Pairing>::ScalarField;
 
 fn lrs_signature(n_iters: usize, log2_low: usize, log2_high: usize) {
-
     let security_par = "128".to_string();
     let msg = "test message";
-    
+
     let circ_desc = CircDescriptor {
         num_pub_io: NUM_PUB_IO_LRS_SE,
         num_commit_witness: NUM_COMMIT_WITNESS_LRS_SE,
@@ -29,6 +29,7 @@ fn lrs_signature(n_iters: usize, log2_low: usize, log2_high: usize) {
     let rng = &mut ark_std::test_rng();
 
     for ring_size_max_log in log2_low..=log2_high {
+
         let ring_size_max = 1 << ring_size_max_log;
         println!("Ring size: {}", ring_size_max);
         let (lrs_pvkey, circuit) =
@@ -58,28 +59,39 @@ fn lrs_signature(n_iters: usize, log2_low: usize, log2_high: usize) {
         let mut sign_times = Vec::new();
         let mut verify_times = Vec::new();
         for _iter in 0..n_iters {
-            println!("Iteration: {}", _iter);
+            let is_print = if _iter == 1 { Some(true) } else { None };
+
             let start_sign = Instant::now();
             let signature = sign::sign::<ark_bn254::Bn254>(&lrs_pvkey, &circuit, &ring, msg);
             let sign_time = start_sign.elapsed();
-            println!("Signature generation time: {:?}", sign_time);
 
             let start_verify = Instant::now();
-            let result = verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature);
+            let result =
+                verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature, is_print);
             let verify_time = start_verify.elapsed();
-            println!("Signature verification time: {:?}\n", verify_time);
             assert!(result, "Signature verification failed");
+
+            if is_print.unwrap_or(false) {
+                println!("Signature generation time: {:?}", sign_time);
+                println!("Signature verification time: {:?}", verify_time);
+            }
 
             sign_times.push(sign_time);
             verify_times.push(verify_time);
+
+            sleep(std::time::Duration::from_millis(100));
         }
         let sign_time_avg = sign_times.iter().sum::<std::time::Duration>() / n_iters as u32;
         let verify_time_avg = verify_times.iter().sum::<std::time::Duration>() / n_iters as u32;
-        println!("Average Sign time for 2^{:?} ring: {:?}", ring_size_max_log, sign_time_avg);
-        println!("Average Verification for 2^{:?} ring: {:?}\n\n", ring_size_max_log, verify_time_avg);
+        println!(
+            "Average Sign time for 2^{:?} ring: {:?}",
+            ring_size_max_log, sign_time_avg
+        );
+        println!(
+            "Average Verification for 2^{:?} ring: {:?}\n\n",
+            ring_size_max_log, verify_time_avg
+        );
     }
-
-    
 }
 
 fn main() {
@@ -89,7 +101,8 @@ fn main() {
     } else {
         1
     };
-    lrs_signature(n_iters, 10, 20);
+    println!("n_iters: {}", n_iters);
+    lrs_signature(n_iters, 3, 20);
 }
 
 #[test]

@@ -91,7 +91,7 @@ mod tests {
         let signature = sign::sign::<ark_bn254::Bn254>(&lrs_pvkey, &circuit, &ring, msg);
 
         let result =
-            verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature);
+            verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature, None);
 
         assert!(result, "Signature verification failed");
     }

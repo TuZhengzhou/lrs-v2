@@ -18,6 +18,7 @@ pub fn verify<E>(
     ring: &Vec<E::ScalarField>,
     message: &str,
     signature: &Signature<E>,
+    is_print: Option<bool>,
 ) -> bool
 where
     E: Pairing,
@@ -34,7 +35,6 @@ where
     let mut result =
         cc::verify_proof(&lrs_pvkey.crs_cc.vk, &signature.cc_proof, &instance).unwrap();
     let cc_elapsed = cc_start.elapsed();
-    println!("CC verification time: {:?}", cc_elapsed);
 
     let sma_start = Instant::now();
     verify_set_member_proof_opt(
@@ -45,7 +45,6 @@ where
         &signature.sma_proof,
     );
     let sma_elapsed = sma_start.elapsed();
-    println!("SMA verification time: {:?}", sma_elapsed);
 
     let commitments = vec![signature.sma_comm.c_g1.into_affine(), signature.cc_proof.d];
 
@@ -58,7 +57,12 @@ where
             &signature.link_proof,
         );
     let link_elapsed = link_start.elapsed();
-    println!("Link verification time: {:?}", link_elapsed);
+
+    if is_print.unwrap_or(false) {
+        println!("CC verification time: {:?}", cc_elapsed);
+        println!("SMA verification time: {:?}", sma_elapsed);
+        println!("Link verification time: {:?}", link_elapsed);
+    }
 
     assert!(result, "Verification failed");
     result
