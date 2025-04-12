@@ -1,7 +1,12 @@
 pragma circom 2.2.0;
 
+include "include/mimcsponge.circom";
 include "include/mimc.circom";
+include "include/bitify.circom";
+include "include/escalarmulfix.circom";
 include "include/babyjub.circom";
+include "include/montgomery.circom";
+include "include/escalarmul.circom";
 
 // if s == 0 returns [in[0], in[1]]
 // if s == 1 returns [in[1], in[0]]
@@ -60,13 +65,7 @@ template SchnorrVerify(){
     signal input s;
     signal input msg;
 
-    component check_R = BabyCheck();
-    check_R.x <== R[0]; 
-    check_R.y <== R[1]; 
-
-    component check_pk = BabyCheck();
-    check_pk.x <== pk[0]; 
-    check_pk.y <== pk[1]; 
+    //signal output verified;
 
     // 1. 计算 e = H(msg || R || P)
     component eHash1 = MultiMiMC7(5, 91);
@@ -153,5 +152,3 @@ template SNARKCircuitA(levels){
     schnorr.s <== s;
     schnorr.msg <== msg;
 }
-
-component main { public [sc, L] } = SNARKCircuitA(15);

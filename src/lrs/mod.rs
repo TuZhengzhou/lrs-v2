@@ -54,8 +54,7 @@ mod tests {
             num_pub_io: NUM_PUB_IO_LRS_SE,
             num_commit_witness: NUM_COMMIT_WITNESS_LRS_SE,
             ioputs_name: IOPUTS_NAME_LRS_SE.iter().map(|s| s.to_string()).collect(),
-            // path_prefix: PATH_PREFIX_LRS_SE.to_string(),
-            path_prefix: "./circoms/lrs_backend/".to_string(),
+            path_prefix: PATH_PREFIX_LRS_SE.to_string(),
             circuit_name: CIRCUIT_NAME_LRS_SE.to_string(),
         };
         
@@ -78,8 +77,7 @@ mod tests {
             num_pub_io: NUM_PUB_IO_LRS_SE,
             num_commit_witness: NUM_COMMIT_WITNESS_LRS_SE,
             ioputs_name: IOPUTS_NAME_LRS_SE.iter().map(|s| s.to_string()).collect(),
-            // path_prefix: PATH_PREFIX_LRS_SE.to_string(),
-            path_prefix: "./circoms/lrs_backend/".to_string(),
+            path_prefix: PATH_PREFIX_LRS_SE.to_string(),
             circuit_name: CIRCUIT_NAME_LRS_SE.to_string(),
         };
 

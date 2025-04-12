@@ -1,0 +1,880 @@
+Ring size: 1024
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 126.468137ms
+CC verification time: 4.030945ms
+SMA verification time: 7.888113ms
+Link verification time: 1.904412ms
+Signature verification time: 13.917255ms
+
+Iteration: 1
+Signature generation time: 185.518986ms
+CC verification time: 3.770535ms
+SMA verification time: 8.306693ms
+Link verification time: 1.977892ms
+Signature verification time: 14.144291ms
+
+Iteration: 2
+Signature generation time: 160.710658ms
+CC verification time: 3.740192ms
+SMA verification time: 7.399161ms
+Link verification time: 2.02472ms
+Signature verification time: 13.259825ms
+
+Iteration: 3
+Signature generation time: 182.366794ms
+CC verification time: 3.642859ms
+SMA verification time: 7.940957ms
+Link verification time: 1.766995ms
+Signature verification time: 13.434178ms
+
+Iteration: 4
+Signature generation time: 155.59834ms
+CC verification time: 3.606864ms
+SMA verification time: 7.910888ms
+Link verification time: 1.956895ms
+Signature verification time: 13.564213ms
+
+Iteration: 5
+Signature generation time: 166.494449ms
+CC verification time: 3.809827ms
+SMA verification time: 7.750033ms
+Link verification time: 2.082165ms
+Signature verification time: 13.745183ms
+
+Iteration: 6
+Signature generation time: 206.169228ms
+CC verification time: 3.645215ms
+SMA verification time: 7.688162ms
+Link verification time: 1.797374ms
+Signature verification time: 13.226605ms
+
+Iteration: 7
+Signature generation time: 191.141221ms
+CC verification time: 3.82537ms
+SMA verification time: 8.878212ms
+Link verification time: 2.048759ms
+Signature verification time: 14.849321ms
+
+Iteration: 8
+Signature generation time: 117.200401ms
+CC verification time: 4.014244ms
+SMA verification time: 8.649256ms
+Link verification time: 2.035947ms
+Signature verification time: 14.796859ms
+
+Iteration: 9
+Signature generation time: 130.477333ms
+CC verification time: 4.235588ms
+SMA verification time: 8.185319ms
+Link verification time: 1.921878ms
+Signature verification time: 14.437703ms
+
+Average Sign time for 2^10 ring: 162.214554ms
+Average Verification for 2^10 ring: 13.937543ms
+
+
+Ring size: 2048
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 122.440915ms
+CC verification time: 3.79873ms
+SMA verification time: 8.882134ms
+Link verification time: 1.8984ms
+Signature verification time: 14.69224ms
+
+Iteration: 1
+Signature generation time: 160.195754ms
+CC verification time: 3.63233ms
+SMA verification time: 8.196889ms
+Link verification time: 1.907228ms
+Signature verification time: 13.823433ms
+
+Iteration: 2
+Signature generation time: 188.77968ms
+CC verification time: 3.681075ms
+SMA verification time: 7.837214ms
+Link verification time: 1.858187ms
+Signature verification time: 13.462351ms
+
+Iteration: 3
+Signature generation time: 180.513058ms
+CC verification time: 3.718331ms
+SMA verification time: 8.054795ms
+Link verification time: 2.039201ms
+Signature verification time: 13.90489ms
+
+Iteration: 4
+Signature generation time: 193.71734ms
+CC verification time: 3.847139ms
+SMA verification time: 8.088746ms
+Link verification time: 1.958397ms
+Signature verification time: 13.98052ms
+
+Iteration: 5
+Signature generation time: 199.213613ms
+CC verification time: 4.268382ms
+SMA verification time: 8.177933ms
+Link verification time: 2.052018ms
+Signature verification time: 14.602357ms
+
+Iteration: 6
+Signature generation time: 178.883444ms
+CC verification time: 3.674941ms
+SMA verification time: 8.071036ms
+Link verification time: 1.908229ms
+Signature verification time: 13.739386ms
+
+Iteration: 7
+Signature generation time: 186.985791ms
+CC verification time: 3.621122ms
+SMA verification time: 9.215006ms
+Link verification time: 2.162789ms
+Signature verification time: 15.107732ms
+
+Iteration: 8
+Signature generation time: 157.57537ms
+CC verification time: 3.8496ms
+SMA verification time: 9.51852ms
+Link verification time: 2.284014ms
+Signature verification time: 15.769007ms
+
+Iteration: 9
+Signature generation time: 168.355571ms
+CC verification time: 4.063626ms
+SMA verification time: 8.82112ms
+Link verification time: 2.297853ms
+Signature verification time: 15.286002ms
+
+Average Sign time for 2^11 ring: 173.666053ms
+Average Verification for 2^11 ring: 14.436791ms
+
+
+Ring size: 4096
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 155.725977ms
+CC verification time: 3.948368ms
+SMA verification time: 8.746667ms
+Link verification time: 1.989285ms
+Signature verification time: 14.785689ms
+
+Iteration: 1
+Signature generation time: 200.926879ms
+CC verification time: 3.94116ms
+SMA verification time: 8.698458ms
+Link verification time: 2.033724ms
+Signature verification time: 14.772453ms
+
+Iteration: 2
+Signature generation time: 195.574089ms
+CC verification time: 3.980044ms
+SMA verification time: 8.505624ms
+Link verification time: 1.802864ms
+Signature verification time: 14.380148ms
+
+Iteration: 3
+Signature generation time: 210.489592ms
+CC verification time: 4.086982ms
+SMA verification time: 8.849369ms
+Link verification time: 1.936169ms
+Signature verification time: 14.972248ms
+
+Iteration: 4
+Signature generation time: 210.217131ms
+CC verification time: 4.429786ms
+SMA verification time: 8.645658ms
+Link verification time: 1.900578ms
+Signature verification time: 15.072002ms
+
+Iteration: 5
+Signature generation time: 206.755132ms
+CC verification time: 3.906234ms
+SMA verification time: 8.260678ms
+Link verification time: 1.870894ms
+Signature verification time: 14.128097ms
+
+Iteration: 6
+Signature generation time: 187.627571ms
+CC verification time: 3.825625ms
+SMA verification time: 8.307937ms
+Link verification time: 1.987132ms
+Signature verification time: 14.214551ms
+
+Iteration: 7
+Signature generation time: 193.70321ms
+CC verification time: 4.050825ms
+SMA verification time: 8.701739ms
+Link verification time: 2.190224ms
+Signature verification time: 15.047184ms
+
+Iteration: 8
+Signature generation time: 208.127548ms
+CC verification time: 3.641486ms
+SMA verification time: 8.686251ms
+Link verification time: 1.907389ms
+Signature verification time: 14.316673ms
+
+Iteration: 9
+Signature generation time: 189.033428ms
+CC verification time: 3.928724ms
+SMA verification time: 9.138888ms
+Link verification time: 1.98396ms
+Signature verification time: 15.171954ms
+
+Average Sign time for 2^12 ring: 195.818055ms
+Average Verification for 2^12 ring: 14.686099ms
+
+
+Ring size: 8192
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 221.263567ms
+CC verification time: 3.942236ms
+SMA verification time: 10.100523ms
+Link verification time: 1.931289ms
+Signature verification time: 16.075569ms
+
+Iteration: 1
+Signature generation time: 219.063665ms
+CC verification time: 4.160273ms
+SMA verification time: 9.108042ms
+Link verification time: 1.724755ms
+Signature verification time: 15.077543ms
+
+Iteration: 2
+Signature generation time: 165.999656ms
+CC verification time: 4.030831ms
+SMA verification time: 9.730257ms
+Link verification time: 1.977083ms
+Signature verification time: 15.838112ms
+
+Iteration: 3
+Signature generation time: 242.114371ms
+CC verification time: 3.972633ms
+SMA verification time: 9.572211ms
+Link verification time: 2.050704ms
+Signature verification time: 15.689297ms
+
+Iteration: 4
+Signature generation time: 246.018377ms
+CC verification time: 3.789639ms
+SMA verification time: 11.908712ms
+Link verification time: 2.534249ms
+Signature verification time: 18.374308ms
+
+Iteration: 5
+Signature generation time: 226.695173ms
+CC verification time: 3.25231ms
+SMA verification time: 9.513102ms
+Link verification time: 1.927826ms
+Signature verification time: 14.801927ms
+
+Iteration: 6
+Signature generation time: 199.169197ms
+CC verification time: 3.899671ms
+SMA verification time: 9.322382ms
+Link verification time: 1.911714ms
+Signature verification time: 15.238726ms
+
+Iteration: 7
+Signature generation time: 231.586097ms
+CC verification time: 4.39133ms
+SMA verification time: 9.744242ms
+Link verification time: 1.792811ms
+Signature verification time: 16.011927ms
+
+Iteration: 8
+Signature generation time: 226.6462ms
+CC verification time: 3.928727ms
+SMA verification time: 10.027172ms
+Link verification time: 2.167128ms
+Signature verification time: 16.233882ms
+
+Iteration: 9
+Signature generation time: 241.28806ms
+CC verification time: 4.252642ms
+SMA verification time: 9.582665ms
+Link verification time: 1.91193ms
+Signature verification time: 15.838146ms
+
+Average Sign time for 2^13 ring: 221.984436ms
+Average Verification for 2^13 ring: 15.917943ms
+
+
+Ring size: 16384
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 244.326611ms
+CC verification time: 3.68544ms
+SMA verification time: 11.732754ms
+Link verification time: 1.92681ms
+Signature verification time: 17.432014ms
+
+Iteration: 1
+Signature generation time: 281.011877ms
+CC verification time: 4.017886ms
+SMA verification time: 11.140645ms
+Link verification time: 1.805144ms
+Signature verification time: 17.066273ms
+
+Iteration: 2
+Signature generation time: 303.550915ms
+CC verification time: 3.51987ms
+SMA verification time: 11.552653ms
+Link verification time: 1.883767ms
+Signature verification time: 17.052372ms
+
+Iteration: 3
+Signature generation time: 278.946536ms
+CC verification time: 4.512173ms
+SMA verification time: 11.287611ms
+Link verification time: 1.937175ms
+Signature verification time: 17.838201ms
+
+Iteration: 4
+Signature generation time: 333.779087ms
+CC verification time: 4.555095ms
+SMA verification time: 11.65604ms
+Link verification time: 1.949503ms
+Signature verification time: 18.262095ms
+
+Iteration: 5
+Signature generation time: 345.614405ms
+CC verification time: 3.70717ms
+SMA verification time: 11.281963ms
+Link verification time: 1.848753ms
+Signature verification time: 16.935857ms
+
+Iteration: 6
+Signature generation time: 310.211128ms
+CC verification time: 3.895081ms
+SMA verification time: 11.560511ms
+Link verification time: 1.833289ms
+Signature verification time: 17.381104ms
+
+Iteration: 7
+Signature generation time: 317.267034ms
+CC verification time: 3.826783ms
+SMA verification time: 11.869569ms
+Link verification time: 1.896469ms
+Signature verification time: 17.686064ms
+
+Iteration: 8
+Signature generation time: 301.062245ms
+CC verification time: 3.833811ms
+SMA verification time: 11.547482ms
+Link verification time: 2.014458ms
+Signature verification time: 17.607033ms
+
+Iteration: 9
+Signature generation time: 311.608284ms
+CC verification time: 3.492717ms
+SMA verification time: 11.496599ms
+Link verification time: 1.860913ms
+Signature verification time: 16.938097ms
+
+Average Sign time for 2^14 ring: 302.737812ms
+Average Verification for 2^14 ring: 17.419911ms
+
+
+Ring size: 32768
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 328.005711ms
+CC verification time: 3.343486ms
+SMA verification time: 16.174752ms
+Link verification time: 1.737941ms
+Signature verification time: 21.352857ms
+
+Iteration: 1
+Signature generation time: 369.979062ms
+CC verification time: 3.781887ms
+SMA verification time: 15.375722ms
+Link verification time: 2.155097ms
+Signature verification time: 21.418019ms
+
+Iteration: 2
+Signature generation time: 414.181028ms
+CC verification time: 4.145005ms
+SMA verification time: 15.672867ms
+Link verification time: 1.87483ms
+Signature verification time: 21.795496ms
+
+Iteration: 3
+Signature generation time: 406.52567ms
+CC verification time: 3.435724ms
+SMA verification time: 15.646491ms
+Link verification time: 1.866777ms
+Signature verification time: 21.050981ms
+
+Iteration: 4
+Signature generation time: 449.420182ms
+CC verification time: 4.400668ms
+SMA verification time: 20.203552ms
+Link verification time: 2.181501ms
+Signature verification time: 26.905283ms
+
+Iteration: 5
+Signature generation time: 474.766715ms
+CC verification time: 4.427767ms
+SMA verification time: 19.8568ms
+Link verification time: 2.234312ms
+Signature verification time: 26.658039ms
+
+Iteration: 6
+Signature generation time: 476.894819ms
+CC verification time: 4.542826ms
+SMA verification time: 19.648013ms
+Link verification time: 2.262286ms
+Signature verification time: 26.57871ms
+
+Iteration: 7
+Signature generation time: 493.362937ms
+CC verification time: 4.817186ms
+SMA verification time: 20.654464ms
+Link verification time: 2.214115ms
+Signature verification time: 27.820965ms
+
+Iteration: 8
+Signature generation time: 503.100149ms
+CC verification time: 4.509858ms
+SMA verification time: 20.710295ms
+Link verification time: 2.323444ms
+Signature verification time: 27.664957ms
+
+Iteration: 9
+Signature generation time: 477.426562ms
+CC verification time: 4.350485ms
+SMA verification time: 19.721618ms
+Link verification time: 2.256008ms
+Signature verification time: 26.441553ms
+
+Average Sign time for 2^15 ring: 439.366283ms
+Average Verification for 2^15 ring: 24.768686ms
+
+
+Ring size: 65536
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 585.724869ms
+CC verification time: 3.977288ms
+SMA verification time: 29.206722ms
+Link verification time: 2.163412ms
+Signature verification time: 35.464087ms
+
+Iteration: 1
+Signature generation time: 719.323161ms
+CC verification time: 4.546592ms
+SMA verification time: 29.190889ms
+Link verification time: 2.222023ms
+Signature verification time: 36.076422ms
+
+Iteration: 2
+Signature generation time: 735.550316ms
+CC verification time: 4.65575ms
+SMA verification time: 29.123073ms
+Link verification time: 2.187634ms
+Signature verification time: 36.081628ms
+
+Iteration: 3
+Signature generation time: 720.052006ms
+CC verification time: 4.876829ms
+SMA verification time: 30.516163ms
+Link verification time: 2.186368ms
+Signature verification time: 37.842881ms
+
+Iteration: 4
+Signature generation time: 726.672088ms
+CC verification time: 4.751118ms
+SMA verification time: 31.600489ms
+Link verification time: 2.341305ms
+Signature verification time: 38.82724ms
+
+Iteration: 5
+Signature generation time: 726.558212ms
+CC verification time: 5.334487ms
+SMA verification time: 33.254028ms
+Link verification time: 2.276393ms
+Signature verification time: 41.007982ms
+
+Iteration: 6
+Signature generation time: 721.342907ms
+CC verification time: 4.392329ms
+SMA verification time: 31.888974ms
+Link verification time: 2.396791ms
+Signature verification time: 38.817245ms
+
+Iteration: 7
+Signature generation time: 704.092048ms
+CC verification time: 4.652979ms
+SMA verification time: 29.453332ms
+Link verification time: 2.102572ms
+Signature verification time: 36.344151ms
+
+Iteration: 8
+Signature generation time: 701.113435ms
+CC verification time: 4.666718ms
+SMA verification time: 29.564436ms
+Link verification time: 2.403353ms
+Signature verification time: 36.750674ms
+
+Iteration: 9
+Signature generation time: 752.892745ms
+CC verification time: 4.350618ms
+SMA verification time: 29.504903ms
+Link verification time: 2.081875ms
+Signature verification time: 36.057703ms
+
+Average Sign time for 2^16 ring: 709.332178ms
+Average Verification for 2^16 ring: 37.327001ms
+
+
+Ring size: 131072
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 1.000802358s
+CC verification time: 4.46951ms
+SMA verification time: 46.519832ms
+Link verification time: 2.097376ms
+Signature verification time: 53.221318ms
+
+Iteration: 1
+Signature generation time: 1.252264357s
+CC verification time: 4.289616ms
+SMA verification time: 47.680266ms
+Link verification time: 2.239719ms
+Signature verification time: 54.335389ms
+
+Iteration: 2
+Signature generation time: 1.222784787s
+CC verification time: 4.483807ms
+SMA verification time: 49.656819ms
+Link verification time: 2.12903ms
+Signature verification time: 56.399616ms
+
+Iteration: 3
+Signature generation time: 1.228919515s
+CC verification time: 4.475018ms
+SMA verification time: 48.070392ms
+Link verification time: 2.125466ms
+Signature verification time: 54.808747ms
+
+Iteration: 4
+Signature generation time: 1.211464585s
+CC verification time: 5.105067ms
+SMA verification time: 47.418893ms
+Link verification time: 2.17821ms
+Signature verification time: 54.822016ms
+
+Iteration: 5
+Signature generation time: 1.211730239s
+CC verification time: 4.911394ms
+SMA verification time: 45.576215ms
+Link verification time: 2.161086ms
+Signature verification time: 52.761174ms
+
+Iteration: 6
+Signature generation time: 1.233845538s
+CC verification time: 4.743511ms
+SMA verification time: 48.896363ms
+Link verification time: 2.067434ms
+Signature verification time: 55.871214ms
+
+Iteration: 7
+Signature generation time: 1.212443149s
+CC verification time: 4.848635ms
+SMA verification time: 46.145978ms
+Link verification time: 1.924458ms
+Signature verification time: 53.050026ms
+
+Iteration: 8
+Signature generation time: 1.202413867s
+CC verification time: 5.13943ms
+SMA verification time: 48.929832ms
+Link verification time: 2.204445ms
+Signature verification time: 56.40133ms
+
+Iteration: 9
+Signature generation time: 1.212953268s
+CC verification time: 4.515696ms
+SMA verification time: 47.364648ms
+Link verification time: 2.091532ms
+Signature verification time: 54.087482ms
+
+Average Sign time for 2^17 ring: 1.198962166s
+Average Verification for 2^17 ring: 54.575831ms
+
+
+Ring size: 262144
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 1.906845369s
+CC verification time: 4.878984ms
+SMA verification time: 83.795882ms
+Link verification time: 2.019464ms
+Signature verification time: 90.820388ms
+
+Iteration: 1
+Signature generation time: 2.233776134s
+CC verification time: 4.377427ms
+SMA verification time: 82.911236ms
+Link verification time: 1.906454ms
+Signature verification time: 89.324583ms
+
+Iteration: 2
+Signature generation time: 2.228148484s
+CC verification time: 4.175472ms
+SMA verification time: 80.412867ms
+Link verification time: 2.078646ms
+Signature verification time: 86.779523ms
+
+Iteration: 3
+Signature generation time: 2.121523311s
+CC verification time: 5.047592ms
+SMA verification time: 80.904823ms
+Link verification time: 1.940615ms
+Signature verification time: 88.018896ms
+
+Iteration: 4
+Signature generation time: 2.173104933s
+CC verification time: 4.184205ms
+SMA verification time: 82.746243ms
+Link verification time: 1.946863ms
+Signature verification time: 88.997485ms
+
+Iteration: 5
+Signature generation time: 2.14535238s
+CC verification time: 4.995135ms
+SMA verification time: 85.538881ms
+Link verification time: 2.254193ms
+Signature verification time: 92.915418ms
+
+Iteration: 6
+Signature generation time: 2.155758515s
+CC verification time: 4.885493ms
+SMA verification time: 82.288863ms
+Link verification time: 2.00998ms
+Signature verification time: 89.308578ms
+
+Iteration: 7
+Signature generation time: 2.184341337s
+CC verification time: 4.589426ms
+SMA verification time: 80.150119ms
+Link verification time: 1.830119ms
+Signature verification time: 86.701532ms
+
+Iteration: 8
+Signature generation time: 2.13498426s
+CC verification time: 3.994667ms
+SMA verification time: 81.166488ms
+Link verification time: 1.865353ms
+Signature verification time: 87.149018ms
+
+Iteration: 9
+Signature generation time: 2.167923021s
+CC verification time: 4.432522ms
+SMA verification time: 83.068956ms
+Link verification time: 2.022244ms
+Signature verification time: 89.649999ms
+
+Average Sign time for 2^18 ring: 2.145175774s
+Average Verification for 2^18 ring: 88.966542ms
+
+
+Ring size: 524288
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 3.661057543s
+CC verification time: 5.192522ms
+SMA verification time: 148.867163ms
+Link verification time: 1.986643ms
+Signature verification time: 156.167308ms
+
+Iteration: 1
+Signature generation time: 4.101098689s
+CC verification time: 4.89644ms
+SMA verification time: 142.182004ms
+Link verification time: 1.967125ms
+Signature verification time: 149.286107ms
+
+Iteration: 2
+Signature generation time: 4.16925119s
+CC verification time: 3.772155ms
+SMA verification time: 148.056716ms
+Link verification time: 2.045109ms
+Signature verification time: 154.046413ms
+
+Iteration: 3
+Signature generation time: 4.02272432s
+CC verification time: 4.842155ms
+SMA verification time: 146.371473ms
+Link verification time: 1.86031ms
+Signature verification time: 153.199337ms
+
+Iteration: 4
+Signature generation time: 4.0527758s
+CC verification time: 3.818263ms
+SMA verification time: 148.531779ms
+Link verification time: 1.957335ms
+Signature verification time: 154.478279ms
+
+Iteration: 5
+Signature generation time: 3.998492723s
+CC verification time: 4.430169ms
+SMA verification time: 145.569113ms
+Link verification time: 1.812763ms
+Signature verification time: 151.934001ms
+
+Iteration: 6
+Signature generation time: 4.054300163s
+CC verification time: 4.801589ms
+SMA verification time: 144.400407ms
+Link verification time: 2.028035ms
+Signature verification time: 151.361967ms
+
+Iteration: 7
+Signature generation time: 4.001855297s
+CC verification time: 4.251104ms
+SMA verification time: 159.077844ms
+Link verification time: 1.770843ms
+Signature verification time: 165.218404ms
+
+Iteration: 8
+Signature generation time: 3.993081755s
+CC verification time: 4.403592ms
+SMA verification time: 145.944694ms
+Link verification time: 1.918886ms
+Signature verification time: 152.380238ms
+
+Iteration: 9
+Signature generation time: 4.013509969s
+CC verification time: 4.371554ms
+SMA verification time: 141.849442ms
+Link verification time: 1.843868ms
+Signature verification time: 148.185543ms
+
+Average Sign time for 2^19 ring: 4.006814744s
+Average Verification for 2^19 ring: 153.625759ms
+
+
+Ring size: 1048576
+Public inputs:
+main.sc: 20000928
+main.L: 17804474404831372771318062141310527328296588970581814948270177988694117180422
+Commit witness:
+main.phi: 16522763539274936672550010747276183294750403510407374019801689147715102349978
+Iteration: 0
+Signature generation time: 7.734191828s
+CC verification time: 4.309503ms
+SMA verification time: 279.614437ms
+Link verification time: 2.127124ms
+Signature verification time: 286.167464ms
+
+Iteration: 1
+Signature generation time: 7.655003711s
+CC verification time: 3.850771ms
+SMA verification time: 268.744644ms
+Link verification time: 1.943062ms
+Signature verification time: 274.653763ms
+
+Iteration: 2
+Signature generation time: 7.655494541s
+CC verification time: 4.50536ms
+SMA verification time: 273.624128ms
+Link verification time: 2.09954ms
+Signature verification time: 280.351425ms
+
+Iteration: 3
+Signature generation time: 7.764319415s
+CC verification time: 4.733153ms
+SMA verification time: 274.069962ms
+Link verification time: 2.117659ms
+Signature verification time: 281.045326ms
+
+Iteration: 4
+Signature generation time: 7.685535461s
+CC verification time: 4.67306ms
+SMA verification time: 274.596203ms
+Link verification time: 1.946722ms
+Signature verification time: 281.343369ms
+
+Iteration: 5
+Signature generation time: 7.673217663s
+CC verification time: 5.216189ms
+SMA verification time: 342.515076ms
+Link verification time: 2.658422ms
+Signature verification time: 350.569776ms
+
+Iteration: 6
+Signature generation time: 8.360068702s
+CC verification time: 5.334782ms
+SMA verification time: 301.165871ms
+Link verification time: 1.857993ms
+Signature verification time: 308.51239ms
+
+Iteration: 7
+Signature generation time: 8.155294471s
+CC verification time: 4.312936ms
+SMA verification time: 339.763363ms
+Link verification time: 2.480669ms
+Signature verification time: 346.718169ms
+
+Iteration: 8
+Signature generation time: 8.24104945s
+CC verification time: 5.951738ms
+SMA verification time: 314.867448ms
+Link verification time: 2.148965ms
+Signature verification time: 323.146251ms
+
+Iteration: 9
+Signature generation time: 7.889208786s
+CC verification time: 3.79139ms
+SMA verification time: 285.686289ms
+Link verification time: 2.215022ms
+Signature verification time: 291.825927ms
+
+Average Sign time for 2^20 ring: 7.881338402s
+Average Verification for 2^20 ring: 302.433386ms
+
+

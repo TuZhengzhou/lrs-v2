@@ -66,10 +66,10 @@ wasmer-js = ["wasmer/js-default"]
 wasmer-sys = ["wasmer/sys-default"]
 
 [[bin]]
-name = "lrs-v2"
-path = "src/bin/main.rs"
+name = "lrs_se"
+path = "src/bin/lrs_se.rs"
 
 [[bin]]
-name = "lrs_a_test"
-path = "src/bin/lrs_a_test.rs"
+name = "lrs_a"
+path = "src/bin/lrs_a.rs"
 
