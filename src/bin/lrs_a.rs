@@ -60,6 +60,8 @@ fn lrs_a(n_iters: usize) {
         let mut verify_times = Vec::new();
 
         for repeat in 0..n_iters {
+            let is_print = if repeat == 0 { Some(true) } else { None };
+
             let rng = &mut ark_std::test_rng();
 
             let start = Instant::now();
@@ -68,13 +70,13 @@ fn lrs_a(n_iters: usize) {
                     .unwrap();
             let setup_time = start.elapsed();
             setup_times.push(setup_time);
-            println!("Repeat {:?}: LRS_A Setup time: {:?}", repeat, setup_time);
+            // println!("Repeat {:?}: LRS_A Setup time: {:?}", repeat, setup_time);
 
             let start = Instant::now();
             let (cc_proof, _, _) = cc::create_random_proof(circ.clone(), &crs_cc.pk, rng).unwrap();
             let proof_time = start.elapsed();
             proof_times.push(proof_time);
-            println!("Repeat {:?}: LRS_A Proof time: {:?}", repeat, proof_time);
+            // println!("Repeat {:?}: LRS_A Proof time: {:?}", repeat, proof_time);
 
             let instance = circ
                 .instance
@@ -89,7 +91,13 @@ fn lrs_a(n_iters: usize) {
             }
             let verify_time = start.elapsed();
             verify_times.push(verify_time);
-            println!("Repeat {:?}: LRS_A Verify time: {:?}\n", repeat, verify_time);
+
+            if is_print.unwrap_or(false) {
+                println!("LRS_A Setup time: {:?}", setup_time);
+                println!("LRS_A Proof time: {:?}", proof_time);
+                println!("LRS_A verification time: {:?}", verify_time);
+            }
+            // println!("Repeat {:?}: LRS_A Verify time: {:?}\n", repeat, verify_time);
 
             assert!(result.is_ok());
         }
@@ -110,6 +118,7 @@ fn main() {
     } else {
         1
     };
+    println!("n_iters: {}", n_iters);
 
     lrs_a(n_iters);
 

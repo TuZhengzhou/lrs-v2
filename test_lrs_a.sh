@@ -15,8 +15,8 @@ if [ ! -d "./target/release" ]; then
     exit 1
 fi
 
-repeat=10
-./target/release/lrs_a_test $repeat > ./logs/lrs_a_test_$time.log 2>&1
+repeat=20
+taskset -c 0 ./target/release/lrs_a $repeat > ./logs/lrs_a_test_$time.log 2>&1
 if [ $? -ne 0 ]; then
     echo "lrs_a_test failed"
     exit 1

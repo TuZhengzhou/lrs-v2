@@ -16,7 +16,7 @@ if [ ! -d "./target/release" ]; then
 fi
 
 repeat=100
-./target/release/lrs_se $repeat > ./logs/lrs_se_test_$time.log 2>&1
+taskset -c 0 ./target/release/lrs_se $repeat > ./logs/lrs_se_test_$time.log 2>&1
 if [ $? -ne 0 ]; then
     echo "lrs_se failed"
     exit 1
