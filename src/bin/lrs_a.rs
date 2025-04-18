@@ -3,6 +3,7 @@ use ark_ff::PrimeField;
 use ark_std::time::Instant;
 use ark_std::One;
 use lrs_v2::cc;
+use lrs_v2::cc::helpers::mimc_constants_round91;
 use lrs_v2::cc::helpers::multi_mimc7;
 use lrs_v2::cc::{verify_proof, CcPVKey};
 use lrs_v2::constants::*;
@@ -11,12 +12,11 @@ use lrs_v2::lrs::structures::CircDescriptor;
 use std::env;
 
 fn lrs_a(n_iters: usize) {
-
     type E = ark_bn254::Bn254;
     type F = <E as Pairing>::ScalarField;
 
     // 将println 输出重定向到文件
-    // ./target/release/lrs_a_test > lrs_a_test.log
+    // ./target/release/lrs_a > test_lrs_a.log
     let ioputs_names = [
         IOPUTS_NAME_LRS_A_10.to_vec(),
         IOPUTS_NAME_LRS_A_11.to_vec(),
@@ -86,8 +86,9 @@ fn lrs_a(n_iters: usize) {
             let start = Instant::now();
             let result = verify_proof(&crs_cc.vk, &cc_proof, &instance);
             // The verifier also need to recompute the Merkle root, which takes 2^15 - 1 times MIMC hash
+            let c = mimc_constants_round91::<E>();
             for _ in 0..(1 << i) - 1 {
-                let _ = multi_mimc7::<E>(&vec![F::one(), F::one()], 2);
+                let _ = multi_mimc7::<E>(&vec![F::one(), F::one()], 2, &c);
             }
             let verify_time = start.elapsed();
             verify_times.push(verify_time);
@@ -121,5 +122,4 @@ fn main() {
     println!("n_iters: {}", n_iters);
 
     lrs_a(n_iters);
-
 }

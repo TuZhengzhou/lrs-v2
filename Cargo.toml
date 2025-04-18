@@ -73,3 +73,10 @@ path = "src/bin/lrs_se.rs"
 name = "lrs_a"
 path = "src/bin/lrs_a.rs"
 
+# [[bin]]
+# name = "lrs_b"
+# path = "src/bin/lrs_b.rs"
+
+[[bin]]
+name = "bm_test"
+path = "src/bin/bm_test.rs"

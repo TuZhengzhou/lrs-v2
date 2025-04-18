@@ -297,3 +297,29 @@ pub const CIRCUIT_NAME_LRS_A_13: &str = "lrs_a_13";
 pub const CIRCUIT_NAME_LRS_A_14: &str = "lrs_a_14";
 pub const CIRCUIT_NAME_LRS_A_15: &str = "lrs_a_15";
 pub const CIRCUIT_NAME_LRS_A_16: &str = "lrs_a_16";
+
+pub const NUM_PUB_IO_LRS_B: usize = 14;
+pub const NUM_COMMIT_WITNESS_LRS_B: usize = 1;
+pub const IOPUTS_NAME_LRS_B: [&str; 19] = [
+    "main.sc",
+    "main.L",
+    "main.c[0][0]",
+    "main.c[0][1]",
+    "main.c[0][2]",
+    "main.c[0][3]",
+    "main.c[0][4]",
+    "main.c[0][5]",
+    "main.c[1][0]",
+    "main.c[1][1]",
+    "main.c[1][2]",
+    "main.c[1][3]",
+    "main.c[1][4]",
+    "main.c[1][5]",
+    "main.phi",
+    "main.sk",
+    "main.pk[0]",
+    "main.pk[1]",
+    "main.r",
+];
+pub const PATH_PREFIX_LRS_B: &str = "./circoms/lrs_b/";
+pub const CIRCUIT_NAME_LRS_B: &str = "lrs_b";
