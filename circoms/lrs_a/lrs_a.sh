@@ -5,6 +5,9 @@ set -e
 # bash run_commands.sh
 # cd ..
 
+echo "You must run this code in the /circoms/lrs_a directory of current project"
+echo "You are in $(pwd)"
+
 cd ./lrs_a
 dirname="lrs_a_circoms"
 
@@ -50,6 +53,7 @@ EOF
 
     # 读取 root 值
     root_file=../../merkle/merkle_circoms/merkle_$i\_js/witness.wtns.json
+    echo "Current directory: $(pwd)"
     echo "Root file: $root_file"
     if [ ! -f "$root_file" ]; then
         echo "File $root_file not found!"

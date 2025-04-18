@@ -1,6 +1,9 @@
 # !/bin/bash
 set -e
 
+echo "You must run this code in the root directory of current project"
+echo "You are in $(pwd)"
+
 cargo build --release
 
 time=$(date +%Y%m%d_%H%M%S)

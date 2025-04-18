@@ -3,3 +3,4 @@
 /.git
 /circoms/lrs_b
 /src/bin/lrs_b.rs
+/logs
