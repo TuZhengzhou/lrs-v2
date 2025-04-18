@@ -101,6 +101,12 @@ bash test_lrs_se.sh
 
 the latter one redirect the output to a log file in /logs.
 
+To run all the tests, run:
+
+```bash
+cargo test
+```
+
 ### Note
 
 If you are instersted in the circuit details and how the circuit compilation results works well with our source code, you can refer to the `/circom/lrs/run_commands.sh` file, which conatains all the step, to obtain all files we need (specifically, `name`.sym, `name`_constraints.json, `name`_js/witness.wtns.json) from the origin `name`.circom circuit.
