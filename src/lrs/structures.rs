@@ -12,6 +12,78 @@ use serde_json::Result as JsonResult;
 use std::collections::HashMap;
 use std::fmt::Debug;
 use std::str::FromStr;
+use ark_std::ops::Div;
+
+#[derive(Debug, Clone)] 
+pub struct SignTime {
+    pub sign: std::time::Duration,
+    pub sma: std::time::Duration,
+    pub cc: std::time::Duration,
+    pub link: std::time::Duration,
+}
+
+impl SignTime {
+    pub fn new() -> Self {
+        SignTime {
+            sign: std::time::Duration::new(0, 0),
+            sma: std::time::Duration::new(0, 0),
+            cc: std::time::Duration::new(0, 0),
+            link: std::time::Duration::new(0, 0),
+        }
+    }
+    
+}
+
+impl Div<u32> for SignTime {
+    type Output = SignTime;
+
+    /// we assue rhs greater than 0
+    fn div(self, rhs: u32) -> Self::Output {
+        let mut ret = self.clone();
+        ret.cc /= rhs;
+        ret.sma /= rhs;
+        ret.link /= rhs;
+        ret.sign /= rhs;
+        
+        ret
+    }
+}
+
+#[derive(Debug, Clone)] 
+pub struct VerifyTime {
+    pub verify: std::time::Duration,
+    pub sma: std::time::Duration,
+    pub cc: std::time::Duration,
+    pub link: std::time::Duration,
+}
+
+impl VerifyTime {
+    pub fn new() -> Self {
+        VerifyTime {
+            verify: std::time::Duration::new(0, 0),
+            sma: std::time::Duration::new(0, 0),
+            cc: std::time::Duration::new(0, 0),
+            link: std::time::Duration::new(0, 0),
+        }
+    }
+}
+
+impl Div<u32> for VerifyTime {
+    type Output = VerifyTime;
+
+    /// we assue rhs greater than 0
+    fn div(self, rhs: u32) -> Self::Output {
+        let mut ret = self.clone();
+        ret.cc /= rhs;
+        ret.sma /= rhs;
+        ret.link /= rhs;
+        ret.verify /= rhs;
+        
+        ret
+    }
+    
+}
+
 
 #[derive(Debug, Clone)] 
 pub struct CircDescriptor {

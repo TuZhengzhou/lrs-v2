@@ -1,9 +1,11 @@
 set -e
 
+tree_height_low=3
+tree_height_high=20
 
-# cd ./merkle
-# bash run_commands.sh
-# cd ..
+cd ./merkle
+bash merkle.sh $tree_height_low $tree_height_high
+cd ..
 
 echo "You must run this code in the /circoms/lrs_a directory of current project"
 echo "You are in $(pwd)"
@@ -18,7 +20,7 @@ fi
 
 cd $dirname
 
-for i in $(seq 10 16); do
+for i in $(seq $tree_height_low $tree_height_high); do
 
     # 生成 Circom 文件
     template_name="lrs_a"

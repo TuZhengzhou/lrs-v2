@@ -2,6 +2,15 @@
 
 set -e
 
+tree_height_low=$1
+tree_height_high=$2
+if [ -z "$tree_height_low" ] || [ -z "$tree_height_high" ]; then
+    echo "Usage: $0 <tree_height_low> <tree_height_high>"
+    tree_height_low=3
+    tree_height_high=16
+    echo "Defaulting to tree height range: $tree_height_low to $tree_height_high"
+fi
+
 dirname="input_backends"
 
 if ! [ -d "$dirname" ]; then
@@ -11,7 +20,7 @@ else
   echo "Directory $dirname already exists."
 fi
 
-for n in {10..16}; do
+for n in $(seq $tree_height_low $tree_height_high); do
   # 生成pathElements数组
   path_elements=()
   for i in $(seq 1 $n); do

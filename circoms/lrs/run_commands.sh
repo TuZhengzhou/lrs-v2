@@ -9,7 +9,7 @@ snarkjs ri lrs.r1cs
 
 snarkjs rp lrs.r1cs
 
-# snarkjs r1cs2json lrs.r1cs
+# snarkjs r1cs2json lrs.r1cs // we don't need this
 
 cd lrs_js
 

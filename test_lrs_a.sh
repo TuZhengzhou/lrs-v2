@@ -1,8 +1,22 @@
 #!/bin/bash
 set -e
 
-echo "You must run this code in the root directory of current project"
-echo "You are in $(pwd)"
+echo "Before running this script, please ensure you have the following:"
+echo "1"
+echo "   cd /circoms/lrs_a"
+echo "   run 'bash lrs_a.sh'(you may need to adjust var 'tree_height_low' and var 'tree_height_high' in lrs_a.sh to the desired range)\n"
+echo "2"
+echo "   adjust /src/constants.rs to add the macro defines that the desired range needed\n"
+echo "   add 'define_input_and_circuit_names_lrs_a!(...)'"
+echo "3"
+echo "   adjust /src/bin/lrs_a.rs to the desired range:"
+echo "   modify variable 'ioputs_names'"
+echo "   modify variable 'circuit_names'"
+echo "   modify variable 'low'"
+echo "   modify variable 'high'"
+echo "Then"
+echo "    You must run this code in the root directory of current project"
+echo "    You are in $(pwd)"
 
 cargo build --release
 

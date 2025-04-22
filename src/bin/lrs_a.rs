@@ -18,6 +18,13 @@ fn lrs_a(n_iters: usize) {
     // 将println 输出重定向到文件
     // ./target/release/lrs_a > test_lrs_a.log
     let ioputs_names = [
+        IOPUTS_NAME_LRS_A_3.to_vec(),
+        IOPUTS_NAME_LRS_A_4.to_vec(),
+        IOPUTS_NAME_LRS_A_5.to_vec(),
+        IOPUTS_NAME_LRS_A_6.to_vec(),
+        IOPUTS_NAME_LRS_A_7.to_vec(),
+        IOPUTS_NAME_LRS_A_8.to_vec(),
+        IOPUTS_NAME_LRS_A_9.to_vec(),
         IOPUTS_NAME_LRS_A_10.to_vec(),
         IOPUTS_NAME_LRS_A_11.to_vec(),
         IOPUTS_NAME_LRS_A_12.to_vec(),
@@ -25,9 +32,20 @@ fn lrs_a(n_iters: usize) {
         IOPUTS_NAME_LRS_A_14.to_vec(),
         IOPUTS_NAME_LRS_A_15.to_vec(),
         IOPUTS_NAME_LRS_A_16.to_vec(),
+        IOPUTS_NAME_LRS_A_17.to_vec(),
+        IOPUTS_NAME_LRS_A_18.to_vec(),
+        IOPUTS_NAME_LRS_A_19.to_vec(),
+        IOPUTS_NAME_LRS_A_20.to_vec(),
     ];
 
     let circuit_names = [
+        CIRCUIT_NAME_LRS_A_3,
+        CIRCUIT_NAME_LRS_A_4,
+        CIRCUIT_NAME_LRS_A_5,
+        CIRCUIT_NAME_LRS_A_6,
+        CIRCUIT_NAME_LRS_A_7,
+        CIRCUIT_NAME_LRS_A_8,
+        CIRCUIT_NAME_LRS_A_9,
         CIRCUIT_NAME_LRS_A_10,
         CIRCUIT_NAME_LRS_A_11,
         CIRCUIT_NAME_LRS_A_12,
@@ -35,15 +53,21 @@ fn lrs_a(n_iters: usize) {
         CIRCUIT_NAME_LRS_A_14,
         CIRCUIT_NAME_LRS_A_15,
         CIRCUIT_NAME_LRS_A_16,
+        CIRCUIT_NAME_LRS_A_17,
+        CIRCUIT_NAME_LRS_A_18,
+        CIRCUIT_NAME_LRS_A_19,
+        CIRCUIT_NAME_LRS_A_20,
     ];
 
-    for i in 10..=16 {
+    let low = 3;
+    let high = 20;
+    for i in low..=high {
         let circ_desc = CircDescriptor {
             num_pub_io: NUM_PUB_IO_LRS_A,
             num_commit_witness: NUM_COMMIT_WITNESS_LRS_A,
-            ioputs_name: ioputs_names[i - 10].iter().map(|s| s.to_string()).collect(),
+            ioputs_name: ioputs_names[i - low].iter().map(|s| s.to_string()).collect(),
             path_prefix: PATH_PREFIX_LRS_A.to_string(),
-            circuit_name: circuit_names[i - 10].to_string(),
+            circuit_name: circuit_names[i - low].to_string(),
         };
 
         let circ = LRSCirc::<F>::construct(&circ_desc).unwrap();
@@ -74,6 +98,10 @@ fn lrs_a(n_iters: usize) {
 
             let start = Instant::now();
             let (cc_proof, _, _) = cc::create_random_proof(circ.clone(), &crs_cc.pk, rng).unwrap();
+            let c = mimc_constants_round91::<E>();
+            for _ in 0..(1 << i) - 1 {
+                let _ = multi_mimc7::<E>(&vec![F::one(), F::one()], 2, &c);
+            }
             let proof_time = start.elapsed();
             proof_times.push(proof_time);
             // println!("Repeat {:?}: LRS_A Proof time: {:?}", repeat, proof_time);

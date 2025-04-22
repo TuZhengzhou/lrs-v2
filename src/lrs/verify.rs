@@ -1,8 +1,8 @@
 use crate::cc;
 use crate::link::PESubspaceSnark;
 use crate::link::SubspaceSnark;
-
 use crate::lrs::structures::LrsPVKey;
+use crate::lrs::structures::VerifyTime;
 use crate::lrs::Signature;
 use crate::sma::verify_set_member_proof_opt;
 use ark_ec::pairing::Pairing;
@@ -18,13 +18,15 @@ pub fn verify<E>(
     ring: &Vec<E::ScalarField>,
     message: &str,
     signature: &Signature<E>,
-    is_print: Option<bool>,
+    verify_time: &mut VerifyTime,
 ) -> bool
 where
     E: Pairing,
     <E as Pairing>::ScalarField: Field + FromStr,
     <E::ScalarField as FromStr>::Err: Debug,
 {
+    let verify_start = Instant::now();
+
     let instance = signature
         .instance
         .iter()
@@ -34,7 +36,7 @@ where
     let cc_start = Instant::now();
     let mut result =
         cc::verify_proof(&lrs_pvkey.crs_cc.vk, &signature.cc_proof, &instance).unwrap();
-    let cc_elapsed = cc_start.elapsed();
+    verify_time.cc = cc_start.elapsed();
 
     let sma_start = Instant::now();
     verify_set_member_proof_opt(
@@ -44,11 +46,10 @@ where
         &ring,
         &signature.sma_proof,
     );
-    let sma_elapsed = sma_start.elapsed();
-
-    let commitments = vec![signature.sma_comm.c_g1.into_affine(), signature.cc_proof.d];
+    verify_time.sma = sma_start.elapsed();
 
     let link_start = Instant::now();
+    let commitments = vec![signature.sma_comm.c_g1.into_affine(), signature.cc_proof.d];
     result = result
         && PESubspaceSnark::<E>::verify(
             &lrs_pvkey.crs_link.pp,
@@ -56,13 +57,9 @@ where
             &commitments,
             &signature.link_proof,
         );
-    let link_elapsed = link_start.elapsed();
+    verify_time.link = link_start.elapsed();
 
-    if is_print.unwrap_or(false) {
-        println!("CC verification time: {:?}", cc_elapsed);
-        println!("SMA verification time: {:?}", sma_elapsed);
-        println!("Link verification time: {:?}", link_elapsed);
-    }
+    verify_time.verify = verify_start.elapsed();
 
     assert!(result, "Verification failed");
     result

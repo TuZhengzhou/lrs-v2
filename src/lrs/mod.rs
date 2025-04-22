@@ -13,6 +13,8 @@ mod tests {
     use crate::lrs::read_witness_file;
     use crate::lrs::CircDescriptor;
     use crate::lrs::Constraints;
+    use crate::lrs::SignTime;
+    use crate::lrs::VerifyTime;
     use crate::constants::*;
 
     #[test]
@@ -88,10 +90,12 @@ mod tests {
         let mut ring = ring_gen::<_, ark_bn254::Bn254>(ring_size_max, signer_idx, rng);
         ring[signer_idx] = circuit.commit_witness[0];
 
-        let signature = sign::sign::<ark_bn254::Bn254>(&lrs_pvkey, &circuit, &ring, msg);
+        let mut sign_time = SignTime::new();
+        let signature = sign::sign::<ark_bn254::Bn254>(&lrs_pvkey, &circuit, &ring, msg, &mut sign_time);
 
+        let mut verify_time = VerifyTime::new();
         let result =
-            verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature, None);
+            verify::verify::<ark_bn254::Bn254>(&lrs_pvkey, &ring, msg, &signature, &mut verify_time);
 
         assert!(result, "Signature verification failed");
     }

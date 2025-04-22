@@ -1,20 +1,33 @@
 # 遇到报错立即停止
 set -e
 
+tree_height_low=$1
+tree_height_high=$2
+if [ -z "$tree_height_low" ] || [ -z "$tree_height_high" ]; then
+    echo "Usage: $0 <tree_height_low> <tree_height_high>"
+    tree_height_low=3
+    tree_height_high=16
+    echo "Defaulting to tree height range: $tree_height_low to $tree_height_high"
+fi
+
 cirdir="merkle_circoms"
 inputdir="input_backends"
 
-if ! [ -d "$cirdir" ]; then
-    echo "Directory $cirdir created."
-    bash gen_circom.sh
-fi
-if ! [ -d "$inputdir" ]; then
-    echo "Directory $inputdir created."
-    bash gen_input.sh
-fi
+# if ! [ -d "$cirdir" ]; then
+#     echo "Directory $cirdir created."
+#     bash gen_circom.sh
+# fi
+# if ! [ -d "$inputdir" ]; then
+#     echo "Directory $inputdir created."
+#     bash gen_input.sh
+# fi
+
+bash gen_circom.sh $tree_height_low $tree_height_high
+bash gen_input.sh $tree_height_low $tree_height_high
+# echo "You must run this code in the /circoms/lrs_a/merkle directory of current project"
 
 cd $cirdir
-for i in $(seq 10 16); do
+for i in $(seq $tree_height_low $tree_height_high); do
     
     name=merkle_$i
     echo $name

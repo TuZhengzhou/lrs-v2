@@ -1,6 +1,10 @@
 # lrs-v2
 
+This repository implements the protocols and algorithms described in the paper *Efficient Constant-Size Linkable Ring Signatures for Ad-hoc Rings via Pairing-Based Set Membership Arguments*. The implementation is written in Rust, leveraging its performance and safety features to ensure efficient and reliable cryptographic operations.
+
 ## Project Structure
+
+we provide a directory structure that organizes the code and resources effectively. The main components of the project are as follows:
 
 ```txt
 lrs-v2/
@@ -45,6 +49,8 @@ lrs-v2/
 
 ### Dev Versions
 
+We run the code on the following versions:
+
 - Ubuntu 20.04.6 LTS
 - cargo 1.82.0 (8f40fc59f 2024-08-21)
 - rustc 1.82.0 (f6e511eec 2024-10-15)
@@ -72,9 +78,9 @@ which will output `cargo 1.86.0 (adf9b6ad1 2025-02-28)` or something like that.
 
 #### To Install Circom
 
-This is not forced, since we include the circuit compilation results in /circoms dirctory.
+This is not forced, since we include the circuit compilation results in /circoms directory. In `circuit_construction.md`, we provide an overview of the steps to compile the circuits and generate the necessary proof files.
 
-One can refer to [Circom 2 Documentation](https://docs.circom.io/getting-started/installation/) for circom installation and basic commands familarity.
+One can refer to [Circom 2 Documentation](https://docs.circom.io/getting-started/installation/) for circom installation and basic commands familiarity.
 
 ### Get start
 
@@ -87,7 +93,7 @@ cargo check
 cargo build --release
 ```
 
-To test our LRS scheme, run:
+To test our LRS scheme (we name it lrs_se since it is simulation-extractable), run:
 
 ```bash
 ./target/release/lrs_se
@@ -99,7 +105,7 @@ or
 bash test_lrs_se.sh
 ```
 
-the latter one redirect the output to a log file in /logs.
+the latter one redirects the output to a log file in /logs.
 
 To run all the tests, run:
 
