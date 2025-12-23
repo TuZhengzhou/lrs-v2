@@ -115,4 +115,4 @@ cargo test
 
 ### Note
 
-If you are instersted in the circuit details and how the circuit compilation results works well with our source code, you can refer to the `/circom/lrs/run_commands.sh` file, which conatains all the step, to obtain all files we need (specifically, `name`.sym, `name`_constraints.json, `name`_js/witness.wtns.json) from the origin `name`.circom circuit.
+If you are interested in the circuit details and how the circuit compilation results work well with our source code, you can refer to the `/circom/lrs/run_commands.sh` file, which contains all the steps to obtain all files we need (specifically, `name`.sym, `name`_constraints.json, `name`_js/witness.wtns.json) from the original `name`.circom circuit.
