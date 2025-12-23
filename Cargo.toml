@@ -70,6 +70,10 @@ name = "lrs_se"
 path = "src/bin/lrs_se.rs"
 
 [[bin]]
+name = "lrs_se_no_opt"
+path = "src/bin/lrs_se_no_opt.rs"
+
+[[bin]]
 name = "lrs_a"
 path = "src/bin/lrs_a.rs"
 

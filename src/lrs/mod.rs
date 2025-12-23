@@ -1,9 +1,11 @@
 pub mod lrs_circ;
 pub mod setup;
 pub mod sign;
+pub mod sign_no_opt;
 pub mod structures;
 pub mod utils;
 pub mod verify;
+pub mod verify_no_opt;
 
 pub use structures::*;
 pub use utils::*;
