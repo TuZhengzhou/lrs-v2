@@ -1,4 +1,7 @@
 ## Circom篇
+
+> 代码中有脚本可一键式完成编译电路、生成证据等一系列命令。
+
 ### 安装circom和snarkjs
 请访问链接
 
@@ -103,6 +106,8 @@ pub const CIRCUIT_NAME_LRS_SE: &str = "lrs";
 ### 构建实际电路
 要构建**实际电路**，我们必须创建**模板电路**的一个实例（使用名为`main`的组件实例化它）。 为此，请创建一个包含以下内容的文件：
 
+template 是电路模版，component 是电路实例
+
 ```plain
  pragma circom 2.0.0;
 
@@ -121,7 +126,7 @@ component main = Multiplier2();
 + `--json`		R1CS矩阵的可读版本`**multiplier2_inst_constraints.json**`（我们的Rust代码依赖它构建约束）
 + `--sym`		符号表`**multiplier2_inst.sym**`，可读。其第1、4列提供**下标**与**导线名**的对应关系。_后续证据文件提供__**下标**__与__**值**__的对应关系_。
 +   			还会生成一个`**multiplier2_inst_js**`目录，包含`multiplier2_inst.wasm`，`generate_witness.js`等生成证据所需的文件
-+ `--wasm`		生成证据需要，`multiplier2_inst.wasm`。在`multiplier2_inst_js`目录下，不可读。
++ `--wasm`		生成证据需要，跟snarkjs配套，`multiplier2_inst.wasm`。在`multiplier2_inst_js`目录下，不可读。
 
 变异结束后，可以使用`snarkjs ri multiplier2_inst.r1cs`查看电路有关信息。如
 
